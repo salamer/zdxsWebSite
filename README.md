@@ -8,10 +8,12 @@ a website for a wonderful club
 #使用:
 
 >初始化数据库:
+    
     python manage.py migrate
     python manage.py makemigrations
     
 
 >运行测试服务器:
+    
     python manage.py runserver
     
