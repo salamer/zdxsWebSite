@@ -1,0 +1,35 @@
+{% extends "blog_base.html" %}
+{% block content %}
+{{ form.non_field_errors }}
+<div class="row" style="background:none repeat scroll 0% 0% #3D85A1;height:750px;">
+<div class="container">
+<h1 class="upper">To write a Data for zhadui!</h1>
+<form class="form-horizontal" method="post" action="">
+	{% csrf_token %}
+	<p class="bg-danger">{{ form.title.errors }}</p>
+	<div class="form-group">
+		<label for="{{ form.title.id_for_label" class="col-md-2 control-label">title:</label>
+		<div class="col-md-10">
+			{{ form.title }}
+		</div>
+	</div>
+	<p class="bg-danger">{{ form.data.errors }}</p>
+	<div class="form-group">
+		<label for="{{ form.body.id_for_label" class="col-md-2 control-label">body:</label>
+		<div class="col-md-10">
+			{{ form.data }}
+		</div>
+	</div>
+	<p class="bg-danger">{{ form.summury.errors }}</p>
+	<div class="form-group">
+		<label for="{{ form.body.id_for_label" class="col-md-2 control-label">summury:</label>
+		<div class="col-md-10">
+			{{ form.summury }}
+		</div>
+	</div>
+	<input type="submit" value="update" class="col-md-offset-2 button button-glow button-rounded button-royal"/>
+</form>
+</div>
+</div>
+
+{% endblock %}
